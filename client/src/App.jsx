@@ -4,6 +4,7 @@ import Test from './components/Test';
 import Counter from './components/Counter';
 import Toggle from './components/Toggle';
 import DarkMode from './components/DarkMode';
+import Timer from './components/Timer';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -82,6 +83,8 @@ function App() {
       <Toggle />
       <br />
       <DarkMode />
+      <br />
+      <Timer />
     </>
   )
 }
