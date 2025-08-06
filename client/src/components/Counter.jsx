@@ -1,21 +1,8 @@
-import { useState } from "react"
-
+import { useCounter } from "../hooks/useCounter"
 
 const Counter = () => {
 
-    const [counter, setCounter] = useState(0)
-
-    const incrementHandler = () => {
-    setCounter(prev => prev + 1)
-    }
-
-const decrementHandler = () => {
-    setCounter(prev => prev - 1)
-    }
-
-const resetHandler = () => {
-    setCounter(0)
-    }
+    const { counter, increment, decrement, reset } = useCounter()
 
   return (
     <>
@@ -24,13 +11,13 @@ const resetHandler = () => {
         </div>
         <div className="gap-4 px-4 space-x-2">
             <button 
-            onClick={incrementHandler}
+            onClick={increment}
             className="cursor-pointer px-2 py-2 bg-red-400 rounded-2xl">Increment</button>
             <button
-            onClick={decrementHandler}
+            onClick={decrement}
             className="cursor-pointer px-2 py-2 bg-blue-400 rounded-2xl">Decrement</button>
             <button
-            onClick={resetHandler}
+            onClick={reset}
             className="cursor-pointer px-2 py-2 bg-green-400 rounded-2xl">Reset</button>
         </div>
     </>
