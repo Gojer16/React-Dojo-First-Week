@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+    --color-todo-primary: #31263E;
+    --color-todo-delete: #F71735;
+    --color-todo-complete: #7FEFBD;
+    --color-todo-undo: #FFD6E8;
+}
