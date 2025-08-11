@@ -6,9 +6,10 @@ const { time, isRunning, start: handleStart, pause: handlePause, reset: resetHan
 
 
   return (
-    <div className='min-h-screen bg-gradient-to-b from-sky-300-300 to-blue-800'>
-        <div>Time: {time}</div>
-        <div className='px-4 py-2 space-x-3'>
+    <div className='px-8 py-12 flex justify-center flex-col items-center mt-4'>
+        <h1 className='text-3xl font-bold mb-1'>Stop Watch</h1>
+        <h1 className='text-2xl font-bold'>Time: {time}s</h1>
+        <div className='px-4 py-2 space-x-3 mb-32 mt-4'>
             <button 
             className='bg-blue-700 cursor-pointer shadow-lg text-center  font-bold text-1xl items-center hover:-translate-y-1 hover:scale-105 transform transition-all duration-300 hover:shadow-2xl text-white px-4 py-3 rounded-lg'
             onClick={handleStart}
